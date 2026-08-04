@@ -175,33 +175,110 @@
 
 <body class="bg-[#020605] text-[#F8F4F0] antialiased selection:bg-[#10B981] selection:text-black">
   <div id="root">
-    <!-- Static Semantic Fallback for Instant Search Engine Crawling (Replaced upon React Hydration) -->
-    <header class="p-8">
-      <h1>Vakulabhushan NJ — Flutter Developer & Mobile App Engineer</h1>
-      <p>Premier Full-Stack Flutter Developer and Mobile App Engineer in Chennai and Coimbatore, India, crafting high-performance cross-platform applications and intelligent AI integrations.</p>
-    </header>
-    <main class="p-8">
-      <section id="about-preview">
-        <h2>About Vakulabhushan NJ</h2>
-        <p>Vakulabhushan NJ is a high-achieving Computer Science Engineering student at SRM Institute of Science and Technology in Chennai (9.1 GPA) and an experienced mobile app developer. Combining clean UI/UX aesthetics with robust backend architectures using Flutter, Dart, Angular, Node.js, Supabase, and Firebase.</p>
-      </section>
-      <section id="projects-preview">
-        <h2>Selected Engineering Work</h2>
-        <ul>
-          <li><strong>Personalens [AR &amp; AI]:</strong> Innovative AI &amp; AR healthcare application built with Flutter, Dart, and Ollama Local LLMs.</li>
-          <li><strong>IFA Enterprise ERP System:</strong> High-throughput inventory and warehouse software developed for industries in Coimbatore using Angular, Node.js, and MongoDB.</li>
-          <li><strong>Healthletic Fitness Mobile App:</strong> Cross-platform fitness tracker built with Flutter, real-time REST APIs, and clean state management.</li>
-          <li><strong>Card Vault:</strong> Smart digital business card archive integrated with AI OCR scanning and Supabase cloud storage.</li>
-        </ul>
-      </section>
-      <section id="skills-preview">
-        <h2>Core Competencies &amp; Technologies</h2>
-        <p>Expertise includes: Flutter Development, Mobile App Developer, Cross Platform App Developer, Flutter Developer Chennai, Flutter Developer Coimbatore, Supabase, Firebase, UI/UX Engineering, Ollama Local LLMs, TypeScript, and Git.</p>
-      </section>
-    </main>
-    <footer class="p-8">
-      <p>Connect with Vakulabhushan NJ on <a href="https://github.com/VAKULABHUSHAN" target="_blank" rel="noopener noreferrer">GitHub</a>, <a href="https://www.linkedin.com/in/vakulabhushan-nj/" target="_blank" rel="noopener noreferrer">LinkedIn</a>, or via email at vakulabhushannandhagopal2006@gmail.com.</p>
-    </footer>
+    <!-- Instant Preloader Splash Screen (Mirrors the React Preloader.tsx for a seamless, flicker-free startup) -->
+    <style>
+      @keyframes initial-progress {
+        0% { width: 0%; }
+        100% { width: 15%; }
+      }
+      .initial-loader {
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #030907;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        z-index: 99000;
+      }
+      .initial-logo {
+        font-family: 'Playfair Display', serif;
+        font-size: 42px;
+        font-weight: 900;
+        letter-spacing: -0.025em;
+        color: #FFFFFF;
+        overflow: hidden;
+        text-align: center;
+      }
+      .initial-logo span {
+        color: #0D6E4F;
+        font-style: italic;
+      }
+      .initial-bar-wrap {
+        width: 200px;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.1);
+        position: relative;
+        overflow: hidden;
+      }
+      .initial-bar {
+        height: 100%;
+        background: linear-gradient(to right, #0D6E4F, #10B981);
+        animation: initial-progress 0.8s ease-out forwards;
+      }
+      .initial-txt {
+        font-family: 'DM Mono', monospace;
+        font-size: 10px;
+        letter-spacing: 0.4em;
+        text-transform: uppercase;
+        color: #9A8880;
+      }
+      .seo-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    </style>
+    <div class="initial-loader">
+      <div class="initial-logo">
+        Vakulabhushan<span> NJ</span>
+      </div>
+      <div class="initial-bar-wrap">
+        <div class="initial-bar"></div>
+      </div>
+      <div class="initial-txt">
+        Loading experience...
+      </div>
+    </div>
+
+    <!-- Static Semantic Fallback for Search Engine Crawling (Visually hidden from users, replaced by React upon mounting) -->
+    <div class="seo-hidden">
+      <header class="p-8">
+        <h1>Vakulabhushan NJ — Flutter Developer & Mobile App Engineer</h1>
+        <p>Premier Full-Stack Flutter Developer and Mobile App Engineer in Chennai and Coimbatore, India, crafting high-performance cross-platform applications and intelligent AI integrations.</p>
+      </header>
+      <main class="p-8">
+        <section id="about-preview">
+          <h2>About Vakulabhushan NJ</h2>
+          <p>Vakulabhushan NJ is a high-achieving Computer Science Engineering student at SRM Institute of Science and Technology in Chennai (9.1 GPA) and an experienced mobile app developer. Combining clean UI/UX aesthetics with robust backend architectures using Flutter, Dart, Angular, Node.js, Supabase, and Firebase.</p>
+        </section>
+        <section id="projects-preview">
+          <h2>Selected Engineering Work</h2>
+          <ul>
+            <li><strong>Personalens [AR &amp; AI]:</strong> Innovative AI &amp; AR healthcare application built with Flutter, Dart, and Ollama Local LLMs.</li>
+            <li><strong>IFA Enterprise ERP System:</strong> High-throughput inventory and warehouse software developed for industries in Coimbatore using Angular, Node.js, and MongoDB.</li>
+            <li><strong>Healthletic Fitness Mobile App:</strong> Cross-platform fitness tracker built with Flutter, real-time REST APIs, and clean state management.</li>
+            <li><strong>Card Vault:</strong> Smart digital business card archive integrated with AI OCR scanning and Supabase cloud storage.</li>
+          </ul>
+        </section>
+        <section id="skills-preview">
+          <h2>Core Competencies &amp; Technologies</h2>
+          <p>Expertise includes: Flutter Development, Mobile App Developer, Cross Platform App Developer, Flutter Developer Chennai, Flutter Developer Coimbatore, Supabase, Firebase, UI/UX Engineering, Ollama Local LLMs, TypeScript, and Git.</p>
+        </section>
+      </main>
+      <footer class="p-8">
+        <p>Connect with Vakulabhushan NJ on <a href="https://github.com/VAKULABHUSHAN" target="_blank" rel="noopener noreferrer">GitHub</a>, <a href="https://www.linkedin.com/in/vakulabhushan-nj/" target="_blank" rel="noopener noreferrer">LinkedIn</a>, or via email at vakulabhushannandhagopal2006@gmail.com.</p>
+      </footer>
+    </div>
   </div>
   <script type="module" src="/src/main.tsx"></script>
 </body>
