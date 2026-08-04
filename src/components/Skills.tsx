@@ -1,8 +1,8 @@
 const SKILLS = [
   {
-    title: 'Frontend & Mobile',
-    desc: 'Building scalable, cross-platform mobile and web applications with rich user animations and clean state management.',
-    tags: ['Flutter', 'Angular', 'Dart', 'TypeScript', 'GetX', 'Provider', 'Tailwind CSS', 'HTML5 & CSS3'],
+    title: 'Frontend & Mobile Apps',
+    desc: 'Building scalable, cross-platform mobile and web applications with rich user animations, clean state management, and premium UI/UX design.',
+    tags: ['Flutter', 'Angular', 'Dart', 'TypeScript', 'GetX', 'Provider', 'Tailwind CSS', 'UI/UX Design'],
     accent: '#0D6E4F',
     icon: (
       <svg className="w-10 h-10" viewBox="0 0 128 128">
@@ -12,9 +12,9 @@ const SKILLS = [
     ),
   },
   {
-    title: 'Backend & Databases',
-    desc: 'Developing robust server-side logic, real-time RESTful APIs, and cloud database architectures for ERP systems and high-throughput apps.',
-    tags: ['Node.js', 'Express.js', 'MongoDB', 'Firebase', 'Supabase', 'REST APIs', 'C++', 'C'],
+    title: 'Backend & Cloud Systems',
+    desc: 'Developing robust server-side logic, real-time RESTful APIs, and scalable cloud database architectures with Supabase and Firebase for high-throughput ERP apps.',
+    tags: ['Supabase', 'Firebase', 'Node.js', 'Express.js', 'MongoDB', 'REST APIs', 'C++', 'SQL & NoSQL'],
     accent: '#0A8B5D',
     icon: (
       <svg className="w-10 h-10" viewBox="0 0 128 128">
@@ -23,9 +23,9 @@ const SKILLS = [
     ),
   },
   {
-    title: 'AI & Dev Ecosystem',
-    desc: 'Integrating AI capabilities including local LLMs (Ollama) and AI-powered OCR, backed by production tooling and collaborative team leadership.',
-    tags: ['Ollama (Local LLM)', 'AI APIs', 'AI OCR', 'Git & GitHub', 'Postman', 'Android Studio', 'Figma'],
+    title: 'AI & Cross-Platform Dev',
+    desc: 'Integrating hybrid AI capabilities including local LLMs (Ollama) and AI OCR, engineering cutting-edge applications for enterprise clients across Chennai and Coimbatore.',
+    tags: ['Ollama (Local LLM)', 'AI Applications', 'AI OCR', 'Git & GitHub', 'Postman', 'Android Studio', 'Figma', 'Flutter Engineer'],
     accent: '#0D6E4F',
     icon: (
       <svg className="w-10 h-10" viewBox="0 0 128 128">

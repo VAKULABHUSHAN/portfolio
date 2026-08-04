@@ -215,7 +215,7 @@ export const Contact = () => {
               <strong className="text-white font-medium hover:text-[#10B981] transition-colors">Flutter, Angular &amp; Full-Stack Systems</strong>,
               with hands-on experience delivering{' '}
               <strong className="text-white font-medium hover:text-[#10B981] transition-colors">4+ production systems</strong>{' '}
-              across healthcare AI, industrial ERP operations, and high-performance cross-platform mobile apps.
+              across healthcare AI, industrial ERP operations, and high-performance cross-platform mobile apps for clients across <strong className="text-white font-medium hover:text-[#10B981] transition-colors">Chennai &amp; Coimbatore</strong>.
             </motion.p>
 
             {/* Download Resume */}

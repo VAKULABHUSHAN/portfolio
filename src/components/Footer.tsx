@@ -24,6 +24,7 @@ export const Footer = () => {
             href="https://github.com/VAKULABHUSHAN"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Vakulabhushan NJ GitHub Profile"
             className="footer-link font-mono text-[12px] tracking-[.3em] uppercase text-white/70 transition-colors duration-400 hover:text-[#10B981]"
           >
             GitHub
@@ -32,6 +33,7 @@ export const Footer = () => {
             href="https://www.linkedin.com/in/vakulabhushan-nj/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Vakulabhushan NJ LinkedIn Profile"
             className="footer-link font-mono text-[12px] tracking-[.3em] uppercase text-white/70 transition-colors duration-400 hover:text-[#10B981]"
           >
             LinkedIn
@@ -40,20 +42,23 @@ export const Footer = () => {
             href="https://www.instagram.com/vakul_23/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Vakulabhushan NJ Instagram Profile"
             className="footer-link font-mono text-[12px] tracking-[.3em] uppercase text-white/70 transition-colors duration-400 hover:text-[#10B981]"
           >
             Instagram
           </a>
           <a
             href="mailto:vakulabhushannandhagopal2006@gmail.com"
+            aria-label="Email Vakulabhushan NJ"
             className="footer-link font-mono text-[12px] tracking-[.3em] uppercase text-white/70 transition-colors duration-400 hover:text-[#10B981]"
           >
             Email
           </a>
           <a
-            href="https://vakulabhushan.github.io/"
+            href="https://vakulabhushan-portfolio.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Vakulabhushan NJ Official Vercel Portfolio"
             className="footer-link font-mono text-[12px] tracking-[.3em] uppercase text-white/70 transition-colors duration-400 hover:text-[#10B981]"
           >
             Portfolio

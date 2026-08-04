@@ -137,10 +137,10 @@ export const Hero = ({ appReady }: { appReady: boolean }) => {
       <div className="absolute inset-0 z-[2] opacity-[0.03] pointer-events-none mix-blend-overlay" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\")" }}></div>
 
       {/* Background large text (Faint behind everything) */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[3] w-full text-center pointer-events-none select-none overflow-hidden">
-        <h1 className="hero-bg-text-anim hero-reveal font-display font-black text-[clamp(130px,28vw,500px)] leading-none text-transparent [-webkit-text-stroke:1px_rgba(13,110,79,0.15)] opacity-10 tracking-[-0.05em] whitespace-nowrap" style={{ '--delay': '0.1s' } as CSSProperties}>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[3] w-full text-center pointer-events-none select-none overflow-hidden" aria-hidden="true">
+        <div role="presentation" className="hero-bg-text-anim hero-reveal font-display font-black text-[clamp(130px,28vw,500px)] leading-none text-transparent [-webkit-text-stroke:1px_rgba(13,110,79,0.15)] opacity-10 tracking-[-0.05em] whitespace-nowrap" style={{ '--delay': '0.1s' } as CSSProperties}>
           VAKULABHUSHAN
-        </h1>
+        </div>
       </div>
 
       {/* Top Main Heading Content */}
@@ -153,6 +153,7 @@ export const Hero = ({ appReady }: { appReady: boolean }) => {
             {/* Subtle vertical gradient and depth */}
             <span className="bg-gradient-to-b from-[#10B981] to-[#0D6E4F] bg-clip-text text-transparent drop-shadow-[0_10px_30px_rgba(13,110,79,0.2)] opacity-85">VAKULABHUSHAN</span>
             <span className="bg-gradient-to-b from-[#10B981] to-[#0D6E4F] bg-clip-text text-transparent drop-shadow-[0_10px_30px_rgba(13,110,79,0.2)] opacity-85">NJ</span>
+            <span className="sr-only"> — Premier Flutter Developer &amp; Mobile App Engineer in Chennai and Coimbatore, India</span>
           </h1>
         </div>
       </div>
@@ -163,14 +164,14 @@ export const Hero = ({ appReady }: { appReady: boolean }) => {
         {/* Left Side: Description & CTA - Centered Vertically */}
         <div className="hero-left-anim hero-reveal flex flex-col gap-2.5 lg:gap-8 max-lg:order-2 max-lg:items-center max-lg:text-center max-lg:-mt-7 z-20 self-center lg:-mt-[5vh]" style={{ '--delay': '0.9s' } as CSSProperties}>
           <p className="text-[13px] sm:text-[15px] lg:text-[clamp(16px,1.2vw,18px)] leading-relaxed text-[#F8F4F0] max-w-[360px] lg:max-w-[380px] drop-shadow-sm">
-            Crafting scalable web and mobile solutions with high-performance architectures. Bridging clean code with real-world engineering impact.
+            Crafting scalable web and cross-platform mobile apps as a dedicated <strong className="font-semibold text-[#10B981]">Flutter Developer in Chennai and Coimbatore</strong>. Bridging clean UI/UX with high-performance engineering architectures and AI applications.
           </p>
 
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-1">
-            <a href="#projects" className="inline-flex items-center justify-center rounded-full bg-[#10B981] text-[#020605] px-6 sm:px-8 py-3 text-xs font-mono tracking-[0.2em] font-bold uppercase transition-all duration-300 hover:bg-[#0D6E4F] hover:text-white hover:shadow-[0_0_25px_rgba(16,185,129,0.4)]">
+            <a href="#projects" aria-label="View Vakulabhushan NJ's selected Flutter and cross-platform mobile apps" className="inline-flex items-center justify-center rounded-full bg-[#10B981] text-[#020605] px-6 sm:px-8 py-3 text-xs font-mono tracking-[0.2em] font-bold uppercase transition-all duration-300 hover:bg-[#0D6E4F] hover:text-white hover:shadow-[0_0_25px_rgba(16,185,129,0.4)]">
               View Work
             </a>
-            <a href="#contact" className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-white px-6 sm:px-8 py-3 text-xs font-mono tracking-[0.2em] font-semibold uppercase transition-all duration-300 hover:bg-white hover:text-[#020605]">
+            <a href="#contact" aria-label="Contact Vakulabhushan NJ for Flutter app development in Chennai and Coimbatore" className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-white px-6 sm:px-8 py-3 text-xs font-mono tracking-[0.2em] font-semibold uppercase transition-all duration-300 hover:bg-white hover:text-[#020605]">
               Contact Me
             </a>
           </div>
@@ -178,16 +179,20 @@ export const Hero = ({ appReady }: { appReady: boolean }) => {
 
         {/* Center Side: Image */}
         <div className="relative w-full h-[clamp(300px,48svh,390px)] sm:h-[48vh] lg:h-[70vh] lg:max-h-none flex justify-center items-end max-lg:order-1 z-10 pointer-events-none">
-          <h1 className="absolute top-[-10px] left-1/2 z-[8] -translate-x-1/2 font-display font-black text-[clamp(64px,24vw,110px)] leading-none tracking-[-0.03em] uppercase text-transparent bg-clip-text bg-gradient-to-b from-[#10B981] to-[#0D6E4F] opacity-85 whitespace-nowrap lg:hidden select-none">
+          <div role="presentation" aria-hidden="true" className="absolute top-[-10px] left-1/2 z-[8] -translate-x-1/2 font-display font-black text-[clamp(64px,24vw,110px)] leading-none tracking-[-0.03em] uppercase text-transparent bg-clip-text bg-gradient-to-b from-[#10B981] to-[#0D6E4F] opacity-85 whitespace-nowrap lg:hidden select-none">
             VAKUL
-          </h1>
+          </div>
 
           {/* Arch styled image container */}
           <div className="absolute bottom-[-18px] lg:bottom-[5px] z-[10] w-[64%] max-w-[320px] lg:w-[min(100%,480px)] lg:max-w-none h-[94%] lg:h-[110%] rounded-t-[500px] overflow-hidden bg-[#020605]">
             <img
               ref={photoRef}
               src="/photo.png"
-              alt="Vakulabhushan NJ — Developer"
+              width={480}
+              height={600}
+              fetchPriority="high"
+              decoding="async"
+              alt="Vakulabhushan NJ — Premier Flutter Developer & Mobile App Engineer in Chennai and Coimbatore"
               className="hero-image-anim hero-reveal w-full h-full object-cover object-top opacity-100 contrast-[1.05]"
               style={{ '--delay': '0.3s' } as CSSProperties}
             />

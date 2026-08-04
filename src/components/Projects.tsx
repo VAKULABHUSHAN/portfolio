@@ -116,7 +116,9 @@ export const Projects = () => {
             >
               <img
                 src={project.image}
-                alt=""
+                loading="lazy"
+                decoding="async"
+                alt={`Vakulabhushan NJ Portfolio — ${project.title} (${project.category}) developed with ${project.techs.join(', ')}`}
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#020806] via-[#020806]/60 to-transparent" />
@@ -144,7 +146,7 @@ export const Projects = () => {
         </div>
 
         {/* Info Blocks */}
-        <div className="max-w-4xl my-auto">
+        <article className="max-w-4xl my-auto">
           <div className="overflow-hidden mb-3 sm:mb-4 pj-entrance-cat">
             <motion.p
               key={`cat-${current}`}
@@ -191,7 +193,7 @@ export const Projects = () => {
             <div className="flex gap-12">
             </div>
           </div>
-        </div>
+        </article>
 
         {/* Navigation Rail */}
         <div className="pj-entrance-bottom flex items-end justify-between pt-4">
@@ -210,9 +212,9 @@ export const Projects = () => {
 
           <div className="flex gap-6 items-center max-md:hidden">
             {PROJECTS.map((p, i) => (
-              <button key={i} onClick={() => goTo(i)} className="relative group h-[56px] w-[100px] overflow-hidden rounded">
+              <button key={i} onClick={() => goTo(i)} aria-label={`View details for ${p.title} project`} aria-current={i === current ? 'true' : 'false'} className="relative group h-[56px] w-[100px] overflow-hidden rounded">
                 <div className={`w-full h-full border ${i === current ? 'border-[#10B981]' : 'border-white/10 opacity-30'} transition-all duration-500`}>
-                  <img src={p.image} className="w-full h-full object-cover grayscale-[30%] brightness-[100%] group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700" alt="" />
+                  <img src={p.image} loading="lazy" decoding="async" className="w-full h-full object-cover grayscale-[30%] brightness-[100%] group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700" alt={`Thumbnail preview for ${p.title}`} />
                 </div>
                 {i === current && <motion.div layoutId="active-pill" className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#10B981]" />}
               </button>

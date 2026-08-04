@@ -1,0 +1,10 @@
+# Robots.txt for Vakulabhushan NJ Portfolio
+# Automatically generated for SEO indexing best practices (2026)
+User-agent: *
+Allow: /
+
+# Host
+Host: https://vakulabhushan-portfolio.vercel.app
+
+# Sitemap
+Sitemap: https://vakulabhushan-portfolio.vercel.app/sitemap.xml

@@ -1,0 +1,22 @@
+{
+  "name": "Vakulabhushan NJ — Flutter Developer & Mobile App Engineer",
+  "short_name": "Vakulabhushan NJ",
+  "description": "Portfolio of Vakulabhushan NJ — Full-Stack Flutter & Mobile App Developer in Chennai and Coimbatore, India, specializing in scalable cross-platform architecture and AI integration.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020605",
+  "theme_color": "#020605",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

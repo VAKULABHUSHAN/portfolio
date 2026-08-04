@@ -28,7 +28,9 @@ export const About = () => {
               <img
                 ref={photoRef}
                 src="/photo.png"
-                alt="Vakulabhushan NJ coding"
+                loading="lazy"
+                decoding="async"
+                alt="Vakulabhushan NJ - Premier Flutter Developer and Mobile App Engineer in Chennai and Coimbatore"
                 className="w-full aspect-[4/5] object-cover object-top contrast-[1.1] transition-all duration-800 group-hover:scale-[1.04] group-hover:contrast-[1.15]"
               />
 
@@ -57,15 +59,15 @@ export const About = () => {
             </div>
 
             <p className="reveal about-p text-base leading-[1.9] text-[#F8F4F0]/80 font-normal" style={{ transitionDelay: '0.2s' }}>
-              I am <strong className="text-[#D4C5BA] font-medium">Vakulabhushan NJ</strong>, a dedicated Full-Stack Developer passionate about scalable web and mobile engineering. Currently pursuing my <strong className="text-[#D4C5BA] font-medium">B.Tech in Computer Science and Engineering</strong> at SRM Institute of Science and Technology (9.1 GPA), I bring strong expertise in problem-solving and software architecture.
+              I am <strong className="text-[#D4C5BA] font-medium">Vakulabhushan NJ</strong>, a premier <strong className="text-[#D4C5BA] font-medium">Flutter Developer in Chennai and Coimbatore</strong> passionate about scalable mobile and web development. Currently pursuing my <strong className="text-[#D4C5BA] font-medium">B.Tech in Computer Science and Engineering</strong> at <strong className="text-[#D4C5BA] font-medium">SRM Institute of Science and Technology</strong> in Chennai, India (9.1 GPA), I bring strong expertise in software architecture and cross-platform applications.
             </p>
 
             <p className="reveal about-p text-base leading-[1.9] text-[#F8F4F0]/80 font-normal" style={{ transitionDelay: '0.3s' }}>
-              My core strengths lie in multi-platform application development using <span className="text-[#10B981]">Flutter and Angular</span>, backed by high-throughput backends built with <strong className="text-[#D4C5BA] font-medium">Node.js, Express, and MongoDB</strong>. I design clean interfaces and reliable real-time RESTful APIs.
+              My core engineering strengths center on multi-platform mobile app development using <span className="text-[#10B981]">Flutter and Angular</span>, enhanced by real-time cloud integrations with <strong className="text-[#D4C5BA] font-medium">Supabase, Firebase, and MongoDB</strong> backed by high-throughput <strong className="text-[#D4C5BA] font-medium">Node.js and Express</strong> REST APIs. I craft clean UI/UX designs matched with reliable backend performance.
             </p>
 
             <p className="reveal about-p text-base leading-[1.9] text-[#F8F4F0]/80 font-normal" style={{ transitionDelay: '0.3s' }}>
-              From engineering complex industrial <strong className="text-[#D4C5BA] font-medium">ERP systems</strong> to integrating cutting-edge <span className="text-[#10B981]">hybrid AI capabilities (Ollama Local LLM & OCR)</span>, I thrive on building impactful, state-of-the-art software solutions.
+              From deploying enterprise industrial <strong className="text-[#D4C5BA] font-medium">ERP systems</strong> across industries in Coimbatore to integrating cutting-edge <span className="text-[#10B981]">hybrid AI applications (Ollama Local LLM &amp; OCR)</span>, I thrive on building state-of-the-art cross-platform solutions that drive real business growth.
             </p>
 
             <div className="about-stats-row flex gap-8 py-6 my-2 border-y border-[#0D6E4F]/25">

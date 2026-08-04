@@ -100,6 +100,7 @@ export const Navbar = () => {
                 <a
                   href={l.href}
                   onClick={e => smoothScroll(e, l.href)}
+                  aria-label={`Navigate to ${l.label} section`}
                   className={`text-[12px] tracking-[.15em] uppercase transition-colors duration-300 ${isActive ? 'text-white font-semibold' : 'text-[#F8F4F0]/80 hover:text-white'
                     }`}
                 >
@@ -120,6 +121,7 @@ export const Navbar = () => {
           href="/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="View Vakulabhushan NJ Resume PDF"
           className="hidden md:inline-flex items-center gap-2 px-6 py-2.5 border border-white/20 text-[12px] tracking-[.15em] uppercase text-[#F8F4F0]/90 hover:text-white hover:border-[#10B981]/50 transition-all duration-400 rounded-[2px] relative overflow-hidden group"
         >
           <span className="relative z-10 font-medium">Resume</span>
