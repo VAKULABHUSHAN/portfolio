@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from 'react'
+import { useState, useCallback, useRef, useEffect } from 'react'
 import { motion, AnimatePresence, useInView } from 'framer-motion'
 
 const PROJECTS = [
@@ -57,12 +57,23 @@ const PROJECTS = [
 export const Projects = () => {
   const [current, setCurrent] = useState(0)
   const [dir, setDir] = useState(0)
+  const [isPaused, setIsPaused] = useState(false)
   const sectionRef = useRef<HTMLElement | null>(null)
   const touchStartX = useRef(0)
   const touchStartY = useRef(0)
 
   // Single reliable trigger for the whole section
   const sectionInView = useInView(sectionRef, { once: true, amount: 0.15 })
+
+  // 7-second auto-scroll timer when section is visible & not paused by user interaction
+  useEffect(() => {
+    if (!sectionInView || isPaused) return
+    const timer = setTimeout(() => {
+      setDir(1)
+      setCurrent((prev) => (prev + 1) % PROJECTS.length)
+    }, 7000)
+    return () => clearTimeout(timer)
+  }, [sectionInView, isPaused, current])
 
   const goTo = useCallback((next: number) => {
     setDir(next > current ? 1 : -1)
@@ -97,8 +108,14 @@ export const Projects = () => {
     <section
       id="projects"
       ref={sectionRef}
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
+      onTouchStart={(e) => {
+        setIsPaused(true)
+        handleTouchStart(e)
+      }}
+      onTouchEnd={(e) => {
+        setIsPaused(false)
+        handleTouchEnd(e)
+      }}
       className={`relative bg-[#040C09] overflow-hidden min-h-[100svh] flex flex-col reveal-trigger ${sectionInView ? 'visible' : ''}`}
     >
       {/* Background Images - Staggered entrance tied to section visibility */}
@@ -196,7 +213,11 @@ export const Projects = () => {
         </article>
 
         {/* Navigation Rail */}
-        <div className="pj-entrance-bottom flex items-end justify-between pt-4">
+        <div
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          className="pj-entrance-bottom flex items-end justify-between pt-4"
+        >
           <div className="flex gap-3 sm:gap-4">
             <button onClick={goPrev} aria-label="Previous Project" className="w-12 h-12 sm:w-14 sm:h-14 border border-white/10 flex items-center justify-center hover:bg-[#10B981]/10 hover:border-[#10B981]/40 transition-all duration-400 group rounded-md bg-white/[0.02]">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-white/60 group-hover:text-[#10B981] transition-colors">
@@ -216,7 +237,21 @@ export const Projects = () => {
                 <div className={`w-full h-full border ${i === current ? 'border-[#10B981]' : 'border-white/10 opacity-30'} transition-all duration-500`}>
                   <img src={p.image} loading="lazy" decoding="async" className="w-full h-full object-cover grayscale-[30%] brightness-[100%] group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700" alt={`Thumbnail preview for ${p.title}`} />
                 </div>
-                {i === current && <motion.div layoutId="active-pill" className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#10B981]" />}
+                {i === current && (
+                  <motion.div layoutId="active-pill" className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-white/20 overflow-hidden">
+                    {!isPaused && sectionInView ? (
+                      <motion.div
+                        key={`timer-${current}`}
+                        initial={{ width: '0%' }}
+                        animate={{ width: '100%' }}
+                        transition={{ duration: 7, ease: 'linear' }}
+                        className="h-full bg-[#10B981]"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-[#10B981]" />
+                    )}
+                  </motion.div>
+                )}
               </button>
             ))}
           </div>
